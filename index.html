@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple tab</title>
+</head>
+<body>
+    <!-- button area start -->
+    <div class="hero">
+        <div class="btn-box">
+            <button id="btn1" onclick="openHTML()"><i class="fab fa-html5"></i>HTML</button>
+            <button id="btn2" onclick="openCSS()"><i class="fab fa-css3"></i>CSS</button>
+            <button id="btn3" onclick="openJS()"><i class="fab fa-js-square"></i>JAVASCRIPT</button>
+        </div>
+        <!-- content area start  -->
+        <div id="content1" class="content">
+            <div class="content-left">
+                <h1>Learn HTML</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dolore alias nam,<br> nisi ullam ex,necessitatibus eos nostrum, ipsam veritatis beatae error obcaecati placeat maxime.Voluptatibus maxime atque incidunt optio ipsa vel nisi vitae minus ipsum officia dicta cumque, beatae officiis quae voluptates voluptate praesentium eaque quaerat enim quia.</p>
+                <a href="#">WATCH VIDEO</a>
+            </div>
+            <div class="content-right">
+                <img src="/img/html.jpg" alt="">
+            </div>
+        </div>
+        <div id="content2" class="content">
+            <div class="content-left">
+                <h1>Learn CSS</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dolore alias nam,<br> nisi ullam ex,necessitatibus eos nostrum, ipsam veritatis beatae error obcaecati placeat maxime.Voluptatibus maxime atque incidunt optio ipsa vel nisi vitae minus ipsum officia dicta cumque, beatae officiis quae voluptates voluptate praesentium eaque quaerat enim quia.</p>
+                <a href="#">WATCH VIDEO</a>
+            </div>
+            <div class="content-right">
+                <img src="/img/css.jpg" alt="">
+            </div>
+        </div>
+        <div id="content3" class="content">
+            <div class="content-left">
+                <h1>Learn JAVASCRIPT</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio dolore alias nam,<br> nisi ullam ex,necessitatibus eos nostrum, ipsam veritatis beatae error obcaecati placeat maxime.Voluptatibus maxime atque incidunt optio ipsa vel nisi vitae minus ipsum officia dicta cumque, beatae officiis quae voluptates voluptate praesentium eaque quaerat enim quia.</p>
+                <a href="#">WATCH VIDEO</a>
+            </div>
+            <div class="content-right">
+                <img src="/img/javascript_banner_sxve2l.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- javascript area  -->
+    <script>
+        var content1 = document.getElementById("content1")
+        var content2 = document.getElementById("content2")
+        var content3 = document.getElementById("content3")
+        var btn1 = document.getElementById("btn1")
+        var btn2 = document.getElementById("btn2")
+        var btn3 = document.getElementById("btn3")
+
+        function openHTML(){
+            content1.style.transform = "translateX(0)";
+            content2.style.transform = "translateX(100%)";
+            content3.style.transform = "translateX(100%)";
+            btn1.style.color = "#ff7846";
+            btn2.style.color = "#000";
+            btn3.style.color = "#000";
+            content1.style.transitionDelay = "0.5s";
+            content2.style.transitionDelay = "0s";
+            content3.style.transitionDelay = "0s";
+        }
+        function openCSS(){
+            content1.style.transform = "translateX(100%)";
+            content2.style.transform = "translateX(0)";
+            content3.style.transform = "translateX(100%)";
+            btn2.style.color = "#ff7846";
+            btn1.style.color = "#000";
+            btn3.style.color = "#000";
+            content1.style.transitionDelay = "0s";
+            content2.style.transitionDelay = "0.5s";
+            content3.style.transitionDelay = "0s";
+        }
+        function openJS(){
+            content1.style.transform = "translateX(100%)";
+            content2.style.transform = "translateX(100%)";
+            content3.style.transform = "translateX(0)";
+            btn3.style.color = "#ff7846";
+            btn2.style.color = "#000";
+            btn1.style.color = "#000";
+            content1.style.transitionDelay = "0s";
+            content2.style.transitionDelay = "0s";
+            content3.style.transitionDelay = "0.5s";
+        }
+    </script>
+</body>
+</html>
